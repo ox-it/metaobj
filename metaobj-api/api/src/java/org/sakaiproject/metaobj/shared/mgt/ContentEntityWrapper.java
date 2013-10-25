@@ -23,6 +23,7 @@ package org.sakaiproject.metaobj.shared.mgt;
 
 import java.io.InputStream;
 import java.util.Collection;
+import java.util.Set;
 import java.util.Stack;
 
 import org.sakaiproject.component.cover.ServerConfigurationService;
@@ -171,7 +172,15 @@ public class ContentEntityWrapper implements ContentResource
 	{
 		return base.getInheritedGroups();
 	}
-	
+
+	public Set<String> getRoleAccessIds() {
+		return base.getRoleAccessIds();
+	}
+
+	public Set<String> getInheritedRoleAccessIds() {
+		return base.getInheritedRoleAccessIds();
+	}
+
 	public boolean isHidden()
 	{
 		return base.isHidden();
